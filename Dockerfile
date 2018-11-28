@@ -1,4 +1,6 @@
-FROM tomcat:7.0
-COPY target/gamutkart.war /usr/local/tomcat/webapps
-ENTRYPOINT /usr/local/tomcat/bin/startup.sh && bash
-RUN apt-get install git
+# Pull base image 
+From tomcat:8-jre8 
+# Maintainer
+MAINTAINER "sureshkumarreddy498@gmail.com" 
+# copy war file on to container 
+COPY ./gamutkart.war /usr/local/tomcat/webapps
