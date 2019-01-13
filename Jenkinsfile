@@ -1,10 +1,10 @@
-	pipeline {
+	node {
 		agent any
 
 		stages {
 		    stage('Checkout') {
 		        steps {
-					checkout scm
+				git 'https://github.com/Suresh498/gamutkart.git'
 					
 		        }
 		    }
